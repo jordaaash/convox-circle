@@ -1,6 +1,6 @@
 # convox-circleci
 
-Demo of using Convox on CircleCI
+Demo of using Convox on CircleCI: https://circleci.com/gh/jordansexton/convox-circle
 
 Originally inspired by [Continuous Deployment with CircleCI and Convox](https://medium.com/@matthewcford/continuous-deployment-with-circleci-and-convox-cb24139f1419).
 
