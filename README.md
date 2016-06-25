@@ -1,4 +1,4 @@
-# convox-circleci
+# convox-circle
 
 Demo of using Convox on CircleCI: https://circleci.com/gh/jordansexton/convox-circle
 
@@ -30,8 +30,8 @@ Please tell me what they are or submit a pull request!
 ## Local setup
 
 ```shell
-git clone https://github.com/jordansexton/convox-circleci.git
-cd convox-circleci
+git clone https://github.com/jordansexton/convox-circle.git
+cd convox-circle
 cp .env.example .env
 chmod +x convox-test.sh
 ./convox-test.sh
