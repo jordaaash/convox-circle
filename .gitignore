@@ -1,0 +1,9 @@
+*.log
+.env
+.idea
+.jshintignore
+.jshintrc
+data
+dump.rdb
+node_modules
+secrets

@@ -1,0 +1,10 @@
+app:
+  build: .
+  command: npm start
+  dockerfile: Dockerfile.deploy
+  environment:
+    - PORT
+    - POSTGRES_URL
+    - REDIS_URL
+  ports:
+    - 80:80

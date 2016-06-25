@@ -1,0 +1,13 @@
+{
+    "env":           {
+        "node": 1
+    },
+    "globals":       {
+        "process": 1
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType":  "module"
+    },
+    "parser":        "babel-eslint"
+}

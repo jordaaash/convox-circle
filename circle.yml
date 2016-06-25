@@ -1,0 +1,36 @@
+dependencies:
+  override:
+    - curl -Ls https://install.convox.com/linux.zip > convox.zip
+    - sudo unzip convox.zip -d /usr/local/bin
+
+deployment:
+  deploy:
+    branch: deploy
+    commands:
+      - ./circle/deploy.sh | tee deploy.log
+
+general:
+  artifacts:
+    - "deploy.log"
+    - "lint.log"
+    - "start.log"
+    - "test.log"
+  branches:
+    only:
+      - deploy
+      - master
+
+machine:
+  services:
+    - docker
+
+test:
+  override:
+    - chmod +x circle/*.sh
+    - ./circle/stop-services.sh
+    - ./circle/start.sh 2>&1 | tee start.log &> /dev/null:
+        background: true
+    - ./circle/wait-for-start.sh
+    - ./circle/export-docker-env.sh
+    - ./circle/lint.sh | tee lint.log
+    - ./circle/test.sh | tee test.log

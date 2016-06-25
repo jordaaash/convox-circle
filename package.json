@@ -1,0 +1,32 @@
+{
+    "name":            "convox-circleci",
+    "version":         "0.0.1",
+    "private":         true,
+    "description":     "Demo of using Convox on CircleCI",
+    "author":          "Jordan Sexton <jordan@jordansexton.com>",
+    "contributors":    [
+        {
+            "name":  "Jordan Sexton",
+            "email": "jordan@jordansexton.com"
+        }
+    ],
+    "main":            "index.js",
+    "engines":         {
+        "node": "6.2.0"
+    },
+    "scripts":         {
+        "lint":  "eslint --ext .js .",
+        "start": "node index.js",
+        "test":  "mocha --timeout 10000 --slow 500 --bail test/index.js"
+    },
+    "dependencies":    {
+        "pg":    "5.1.0",
+        "redis": "2.6.2"
+    },
+    "devDependencies": {
+        "babel-eslint": "6.0.4",
+        "chai":         "3.5.0",
+        "eslint":       "2.13.0",
+        "mocha":        "2.5.3"
+    }
+}

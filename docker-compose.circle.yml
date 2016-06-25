@@ -1,0 +1,22 @@
+app:
+  build: .
+  command: npm start
+  environment:
+    - PORT
+    - POSTGRES_URL
+    - REDIS_URL
+  links:
+    - postgres
+    - redis
+  ports:
+    - 80:80
+
+postgres:
+  image: convox/postgres
+  ports:
+    - 5432
+
+redis:
+  image: convox/redis
+  ports:
+    - 6379
