@@ -45,9 +45,7 @@ describe('Postgres database', function () {
     });
 
     it('connects', function (done) {
-        client.connect(function (error) {
-            done(error);
-        });
+        client.connect(done);
     });
 
     it('selects a value', function (done) {
